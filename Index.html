@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Dashboard</title>
+    <!-- Tailwind CSS for styling without writing separate CSS files -->
+    <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-slate-800 border-b border-slate-700 px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-emerald-400 tracking-wide">CoinEarn AI</h1>
+        <div class="flex items-center gap-4">
+            <!-- Points Balance Display -->
+            <div class="bg-slate-900 px-4 py-1.5 rounded-full border border-emerald-500/30 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                <span class="text-sm font-semibold">Balance: <span id="user-points" class="text-emerald-400 font-bold">0</span> Points</span>
+            </div>
+            <button class="bg-emerald-500 hover:bg-emerald-600 text-slate-900 text-sm font-bold px-4 py-1.5 rounded-lg transition-colors">
+                Withdraw
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container Layout -->
+    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <!-- Sidebar Navigation Menu -->
+        <aside class="md:col-span-1 space-y-2">
+            <a href="#" class="block bg-emerald-500/10 text-emerald-400 font-medium px-4 py-2.5 rounded-lg border border-emerald-500/20">🔥 Top Offers</a>
+            <a href="#" class="block text-slate-400 hover:bg-slate-800 hover:text-slate-200 px-4 py-2.5 rounded-lg transition-colors">📋 Take Surveys</a>
+            <a href="#" class="block text-slate-400 hover:bg-slate-800 hover:text-slate-200 px-4 py-2.5 rounded-lg transition-colors">🎮 Play Games</a>
+            <a href="#" class="block text-slate-400 hover:bg-slate-800 hover:text-slate-200 px-4 py-2.5 rounded-lg transition-colors">👥 Referral Program</a>
+        </aside>
+
+        <!-- Main Content Area / Offerwall Grid -->
+        <main class="md:col-span-3 space-y-6">
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                <h2 class="text-lg font-bold mb-2">Welcome Back! 👋</h2>
+                <p class="text-slate-400 text-sm">Complete tasks, download apps, or take surveys from the walls below to instantly credit your point balance.</p>
+            </div>
+
+            <h3 class="text-base font-bold text-slate-400 uppercase tracking-wider">Available Offerwalls</h3>
+            
+            <!-- Grid containing Offerwall Placeholders -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <!-- Offerwall Card 1 -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-slate-600 transition-all">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold mb-4">BL</div>
+                        <h4 class="font-bold text-base">BitLabs Surveys</h4>
+                        <p class="text-xs text-slate-400 mt-1">High-paying market research surveys. Refreshes hourly.</p>
+                    </div>
+                    <button class="w-full bg-slate-700 hover:bg-slate-600 text-sm font-semibold py-2 rounded-lg mt-6 transition-colors">Open Wall</button>
+                </div>
+
+                <!-- Offerwall Card 2 -->
+                <div class="bg-slate-800 border border-slate-700 rounded-xl p-5 flex flex-col justify-between hover:border-slate-600 transition-all">
+                    <div>
+                        <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 font-bold mb-4">TX</div>
+                        <h4 class="font-bold text-base">Torox Tasks</h4>
+                        <p class="text-xs text-slate-400 mt-1">Earn points by playing mobile games and testing new applications.</p>
+                    </div>
+                    <button class="w-full bg-slate-700 hover:bg-slate-600 text-sm font-semibold py-2 rounded-lg mt-6 transition-colors">Open Wall</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
