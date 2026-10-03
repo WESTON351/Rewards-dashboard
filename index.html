@@ -70,6 +70,36 @@
             </div>
         </main>
     </div>
+    <!-- Registration Popup / Login Script -->
+    <script>
+        // REPLACE THE URL BELOW WITH YOUR COPIED GOOGLE WEB APP URL
+        const BACKEND_URL = "YOUR_COPIED_WEB_APP_URL_HERE";
+
+        // Simple function to simulate registration on your iPad
+        async function registerUser(email, password) {
+            const userId = "USER_" + Math.floor(Math.random() * 100000);
+            
+            try {
+                const response = await fetch(BACKEND_URL, {
+                    method: "POST",
+                    mode: "no-cors", // Necessary for cross-domain requests on Google Apps Script
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        action: "register",
+                        userId: userId,
+                        email: email,
+                        password: password
+                    })
+                });
+                
+                alert("Account created successfully! User ID generated: " + userId);
+                localStorage.setItem("current_user_id", userId);
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Registration failed. Check browser console.");
+            }
+        }
+    </script>
 
 </body>
 </html>
